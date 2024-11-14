@@ -39,9 +39,6 @@ void setup() {
   pinMode(ECHO, INPUT);
   pinServo.attach(6);
 
-  //lcd.setCursor(0, 0);
-  //lcd.print("JUMLAH KENDARAAN");
-  //lcd.clear();
 }
 
 void loop() {
