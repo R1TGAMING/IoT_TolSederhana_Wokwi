@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Rafi Sofyan Triyanto",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -171.3, "left": 303.1, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 25.6,
+      "left": 428,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -165.2, "left": 576, "attrs": {} }
+  ],
+  "connections": [
+    ["ultrasonic1:VCC", "uno:5V", "red", ["v297.6", "h-96"]],
+    ["ultrasonic1:TRIG", "uno:13", "green", ["v28.8", "h-125.2"]],
+    ["ultrasonic1:ECHO", "uno:12", "green", ["v38.4", "h-250.4"]],
+    ["ultrasonic1:GND", "uno:GND.1", "black", ["v67.2", "h-289.2"]],
+    ["lcd1:GND", "uno:GND.1", "black", ["h-124.8", "v-67.2", "h-192"]],
+    ["lcd1:VCC", "uno:5V", "red", ["h-57.6", "v153.7", "h-211.2"]],
+    ["lcd1:SDA", "uno:A4", "green", ["h-115.2", "v144.2", "h-67.2"]],
+    ["lcd1:SCL", "uno:A5", "green", ["h-124.8", "v125.1", "h-48"]],
+    ["servo1:GND", "uno:GND.1", "black", ["h-38.4", "v124.8", "h-393.6"]],
+    ["servo1:V+", "uno:5V", "green", ["h-48", "v144.1", "h-211.2", "v211.2", "h-96"]],
+    ["servo1:PWM", "uno:6", "green", ["h-96", "v96.2", "h-249.6"]]
+  ],
+  "dependencies": {}
+}
